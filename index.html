@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+	html {
+		height: 100%;
+		width: 100%;
+		min-width: 650px;
+	}
+
+	body {
+		font-family: "Calibri";
+		background-image: url(images/space_backdrop.png);
+		background-attachment: fixed;
+		color: white;
+		margin: 0px;
+	}
+
+	.skeleton {
+		background-color: #e2e2e220;
+		margin: 70px auto;
+		padding: 20px;
+		height: 100%;
+		width: 600px;
+	}
+
+	.signupform {
+		font-size: 24px;
+		padding: 20px 160px;
+	}
+
+	.links {
+		text-align: center;
+		padding: 10px 100px;
+		font-size: 24px;
+	}
+
+	.footer {
+		background-color: #e2e2e220;
+		margin: 0px auto;
+		padding: 20px 0px;
+		overflow: hidden;
+		font-size: 18px;
+		text-align: center;
+	}
+
+	.acceptance {
+		font-size: 20px;
+		margin: 0px -80px;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: darkgrey;
+	}
+
+	.footer a {
+		padding: 0px 10px;
+	}
+
+	h1 {
+		padding-top: 40px;
+		text-align: center;
+		font-size: 72px;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 10px;
+		font-size: 40px;		
+	}
+
+	h3 {
+	}
+
+</style>
+
+<head>
+	<title>landingpage - index</title>	
+</head>
+<body>
+
+	<h1>Advertising</h1>
+	<h1>Advertising</h1>
+	<div class="skeleton">
+		<h2>Before you proceed</h2>
+
+		<div class="links">
+			<a href="terms.html">Terms and Conditions</a>
+			<br>
+			<a href="privacy.html">Privacy Policy</a>
+		</div>
+
+		<form class="signupform">
+			<div>
+				Full Name:<br> <input type="text" name="name" required value="" style="width: 275px;">
+			</div>
+			<br>
+			<div>
+				Date of Birth:<br> 
+				
+				<input type="text" name="year" placeholder="Year" minlength="4" maxlength="4" required value="" style="width: 75px;">
+				<select name="Month" required>
+					<option disabled selected ="selected">Month</option>
+					<option>January</option>
+					<option>February</option>
+					<option>March</option>
+					<option>April</option>
+					<option>May</option>
+					<option>June</option>
+					<option>July</option>
+					<option>August</option>
+					<option>September</option>
+					<option>October</option>
+					<option>November</option>
+					<option>December</option>
+				</select>
+				<input type="text" name="day" placeholder="Day" maxlength="2" required value="" style="width: 50px;">
+			</div>
+			<br>
+			<div>
+				Email Address:<br>
+				<input type="email" name="email" required style="width: 275px;">
+			</div>
+			<br>
+			<div>
+				Upload Your Gameplay Video (Max Filesize: 200MB)
+				<input type="file" id="file" name="video" value="0" accept="video/*" required>
+			</div>
+			<br>
+			<div class="acceptance">
+				<input type="checkbox" name="accept" required> I accept to the <a href="terms.html">Terms and Conditions</a> stated above.
+				<br>
+				<br>
+				<input type="checkbox" name="compete"> I wish to compete in Fortnite competitively.
+				<br>
+				<br>
+				<input type="checkbox" name="updates" checked> I wish to recieve updates about upcoming events and/or competitions. 
+			</div>
+			<br>
+			<input type="submit" value="Sign Up" style="padding: 5px 10px;">
+			<script>
+				var uploadField = document.getElementById("file");
+
+				uploadField.onchange = function() {
+					if(this.files[0].size > 209715200) {
+						alert("File is too big!");
+						this.value = "";
+					};
+				};
+			</script>
+		</form>
+		
+	</div>
+	<div class="footer">
+		<a href="">Home</a>
+		<a href="about.html">About</a>
+		<a href="support.html">Support</a>
+		<a href="terms.html">Terms and Conditions</a>
+		<a href="privacy.html">Privacy Policy</a>
+	</div>
+	
+</body>
+</html>
